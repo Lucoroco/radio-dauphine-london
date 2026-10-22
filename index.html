@@ -1,25 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Radio Dauphine London" />
+<meta property="og:url" content="https://rdl-dauphine.com/" />
+<meta property="og:title" content="Discover RDL | Radio Dauphine London" />
+<meta property="og:description" content="Free to join, no selection interviews, flexible ways to get involved." />
+
+<meta property="og:image" content="https://rdl-dauphine.com/rdl-social-square.png?v=2" />
+<meta property="og:image:secure_url" content="https://rdl-dauphine.com/rdl-social-square.png?v=2" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="Radio Dauphine London logo" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Discover RDL | Radio Dauphine London" />
+<meta name="twitter:description" content="Free to join, no selection interviews, flexible ways to get involved." />
+<meta name="twitter:image" content="https://rdl-dauphine.com/rdl-social-square.png?v=2" />
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Discover Radio Dauphine London: free to join, no selection interviews, flexible ways to get involved." />
 <title>Discover RDL | Radio Dauphine London</title>
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Radio Dauphine London" />
-<meta property="og:url" content="https://radio-dauphine-london.vercel.app/" />
-<meta property="og:title" content="Discover RDL | Radio Dauphine London" />
-<meta property="og:description" content="Discover Radio Dauphine London. Free to join, no selection interviews and plenty of ways to get involved." />
-<meta property="og:image" content="https://radio-dauphine-london.vercel.app/rdl-social.png" />
-<meta property="og:image:secure_url" content="https://radio-dauphine-london.vercel.app/rdl-social.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="534" />
-<meta property="og:image:height" content="280" />
-<meta property="og:image:alt" content="Radio Dauphine London official logo" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Discover RDL | Radio Dauphine London" />
-<meta name="twitter:description" content="Free to join. No selection interviews. Explore RDL." />
-<meta name="twitter:image" content="https://radio-dauphine-london.vercel.app/rdl-social.png" />
 <style>
 :root{--ink:#0f1b47;--blue:#08118c;--blue2:#173ad1;--bright:#2f67ed;--light:#f7f9ff;--line:#dfe6f6;--muted:#5a6987;--shadow:0 14px 45px rgba(11,28,92,.08)}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
@@ -182,28 +185,6 @@ dialog h3{margin:0 0 9px;font-size:24px;letter-spacing:-.04em} dialog p{font-siz
  .series-title h3{font-size:15px}
  .series p{font-size:12.5px}
 }
-
-/* RDL mobile polish: eliminate browser tap flash while retaining keyboard focus */
-a, button, [role="button"]{-webkit-tap-highlight-color:transparent}
-a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
-@media (hover:none){.btn:hover,.membership:hover,.team:hover,.series:hover{transform:none}}
-@media(max-width:720px){
-  .hero-actions{align-items:stretch;width:min(100%,286px);gap:11px}
-  .hero-actions .btn{box-sizing:border-box;width:100%;min-width:0;min-height:47px;padding:12px 14px;font-size:14px;line-height:1.3;text-align:center;white-space:normal;border-radius:999px}
-  .series-grid{gap:11px;align-items:stretch}
-  .series{min-height:0;height:100%;padding:17px 14px 20px}
-  .series-title{display:grid;grid-template-columns:19px minmax(0,1fr);align-items:start;column-gap:8px;min-height:77px;margin-bottom:8px}
-  .series-title h3{margin:0;font-size:15px;font-weight:800;line-height:1.31;letter-spacing:-.02em;overflow-wrap:normal;hyphens:none}
-  .series-icon{height:21px;margin-top:1px;align-self:start}
-  .series-icon svg{height:19px;width:19px}
-  .series p{font-size:13px;line-height:1.47;margin:0}
-}
-@media(max-width:360px){
-  .hero-actions .btn{font-size:13px}
-  .series-title h3{font-size:14px}
-  .series-title{min-height:75px}
-  .series p{font-size:12.5px}
-}
 </style>
 </head>
 <body>
@@ -239,7 +220,7 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
 <footer><div class="container foot"><span>Radio Dauphine London</span><a class="backtop" href="#top">Back to top ↑</a></div></footer>
 <dialog id="form-dialog" aria-labelledby="form-dialog-title"><h3 id="form-dialog-title">Registration form coming soon</h3><p>The RDL Google Form hasn't been connected yet. Once the form link is added, this button will take you there directly.</p><button type="button" class="btn btn-blue" id="close-dialog">Got it</button></dialog>
 <script>
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf_5ohhSNn0A3jLqx_bpeEMOLtwbE73gg2Z8URcFGOkMFYaIw/viewform";
+const GOOGLE_FORM_URL = "";
 const dialog = document.getElementById('form-dialog');
 for (const btn of document.querySelectorAll('[data-join]')) {
   btn.addEventListener('click', () => {

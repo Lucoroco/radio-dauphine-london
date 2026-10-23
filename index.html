@@ -193,6 +193,14 @@ dialog h3{margin:0 0 9px;font-size:24px;letter-spacing:-.04em} dialog p{font-siz
 .footer-linkedin{display:inline-flex;align-items:center;gap:7px;color:#0a66c2;font-weight:700}
 .footer-linkedin svg{width:16px;height:16px}
 @media(max-width:720px){.top-links a.linkedin-link{display:inline-flex;width:32px;height:32px;border-radius:8px}.top-links a.linkedin-link svg{width:17px;height:17px}.footer-links{gap:14px}}
+
+/* Remove translucent blue tap highlight on touch devices. Keep visible keyboard focus. */
+html, body, a, button, [role="button"], [tabindex], input, select, textarea, label {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:focus:not(:focus-visible) {
+  outline: none;
+}
 </style>
 </head>
 <body>

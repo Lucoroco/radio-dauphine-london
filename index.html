@@ -203,6 +203,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:f
   outline: none;
 }
 
+.rdl-phone-logo{display:block;width:93px;height:43px;object-fit:contain;object-position:left center;filter:brightness(0) saturate(100%) invert(16%) sepia(80%) saturate(2729%) hue-rotate(226deg) brightness(82%) contrast(110%)}
 /* RDL's video-first format preview: a responsive vertical short-video mock-up */
 .rdl-video-section{background:radial-gradient(ellipse at 50% 50%,#eef3ff 0%,#fff 68%);border:1px solid #e0e8fa;border-radius:27px;padding:38px 24px 28px;position:relative;overflow:hidden;text-align:center}
 .rdl-video-heading{position:relative;z-index:2;max-width:730px;margin:0 auto}
@@ -312,7 +313,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:f
     <div class="rdl-video-arc rdl-video-arc-right" aria-hidden="true"></div>
     <div class="rdl-phone" role="img" aria-label="Illustrative preview of an RDL vertical short video: students discussing around microphones with social-media style controls.">
       <div class="rdl-phone-screen">
-        <div class="rdl-phone-topbar"><span class="rdl-phone-brand"><span class="rdl-phone-mark" aria-hidden="true">◉</span><span>RADIO<br>DAUPHINE<small>LONDON</small></span></span><span class="rdl-phone-preview">CONCEPT PREVIEW</span></div>
+        <div class="rdl-phone-topbar"><span class="rdl-phone-brand"><img class="rdl-phone-logo" src="/rdl-social.png" alt="Radio Dauphine London" /></span><span class="rdl-phone-preview">CONCEPT PREVIEW</span></div>
         <div class="rdl-phone-show-title">Campus Around<br>the Table<span class="rdl-phone-title-line"></span></div>
         <svg class="rdl-video-illustration" viewBox="0 0 330 365" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
@@ -407,6 +408,10 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:f
 <footer><div class="container foot"><span>Radio Dauphine London</span><div class="footer-links"><a class="footer-linkedin" href="https://www.linkedin.com/company/146761488/" target="_blank" rel="noopener noreferrer" aria-label="Follow Radio Dauphine London on LinkedIn"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.56V9h3.554v11.452zM22.225 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.77 24h20.451c.978 0 1.779-.773 1.779-1.729V1.73C24 .774 23.203 0 22.225 0z"/></svg> <span>LinkedIn</span></a><a class="backtop" href="#top">Back to top ↑</a></div></div></footer>
 <dialog id="form-dialog" aria-labelledby="form-dialog-title"><h3 id="form-dialog-title">Registration form coming soon</h3><p>The RDL Google Form hasn't been connected yet. Once the form link is added, this button will take you there directly.</p><button type="button" class="btn btn-blue" id="close-dialog">Got it</button></dialog>
 <script>
+// Reuse the site's official logo in the illustrative short-video header.
+const rdlPreviewLogo = document.querySelector('.rdl-phone-logo');
+const rdlOfficialLogo = document.querySelector('.hero-logo');
+if (rdlPreviewLogo && rdlOfficialLogo) rdlPreviewLogo.src = rdlOfficialLogo.src;
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf_5ohhSNn0A3jLqx_bpeEMOLtwbE73gg2Z8URcFGOkMFYaIw/viewform";
 const dialog = document.getElementById('form-dialog');
 for (const btn of document.querySelectorAll('[data-join]')) {

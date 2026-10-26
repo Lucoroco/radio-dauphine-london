@@ -202,6 +202,79 @@ html, body, a, button, [role="button"], [tabindex], input, select, textarea, lab
 a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* RDL's video-first format preview: a responsive vertical short-video mock-up */
+.rdl-video-section{background:radial-gradient(ellipse at 50% 50%,#eef3ff 0%,#fff 68%);border:1px solid #e0e8fa;border-radius:27px;padding:38px 24px 28px;position:relative;overflow:hidden;text-align:center}
+.rdl-video-heading{position:relative;z-index:2;max-width:730px;margin:0 auto}
+.rdl-video-heading .overline{margin-bottom:12px}
+.rdl-video-heading .overline::before{display:none}
+.rdl-video-heading h2{font-size:clamp(30px,4.25vw,48px);letter-spacing:-.048em}
+.rdl-video-redline{display:block;width:50px;height:4px;border-radius:8px;background:#fa2e4b;margin:17px auto 16px}
+.rdl-video-heading p{color:#52607d;line-height:1.65;font-size:15px;max-width:670px;margin:0 auto}
+.rdl-video-heading strong{color:#15276b}
+.rdl-video-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:566px;padding:25px 10px 8px}
+.rdl-video-arc{position:absolute;border:23px solid #dee6fc;width:350px;height:350px;border-radius:50%;pointer-events:none;opacity:.9}
+.rdl-video-arc-left{left:-235px;top:40px}
+.rdl-video-arc-right{right:-235px;bottom:10px}
+.rdl-video-arc::before{content:"";display:block;position:absolute;inset:52px;border:15px solid #e9eeff;border-radius:50%}
+.rdl-phone{position:relative;width:290px;height:538px;flex-shrink:0;border:7px solid #111521;border-radius:45px;background:#0c1021;padding:5px;box-shadow:0 31px 70px rgba(11,26,85,.2),0 0 0 1px #697082;transform:translateZ(0)}
+.rdl-phone::before{content:"";position:absolute;top:92px;left:-10px;width:3px;height:46px;border-radius:3px;background:#343a48}
+.rdl-phone::after{content:"";position:absolute;top:175px;right:-10px;width:3px;height:65px;border-radius:3px;background:#343a48}
+.rdl-phone-island{position:absolute;z-index:9;top:13px;left:50%;transform:translateX(-50%);width:78px;height:17px;border-radius:40px;background:#080b12}
+.rdl-phone-screen{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#f0f5ff 0%,#dae6f6 60%,#081431 100%);text-align:left}
+.rdl-phone-topbar{position:absolute;z-index:4;left:18px;right:17px;top:29px;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.rdl-phone-brand{color:#092486;font-size:12px;line-height:.95;letter-spacing:-.04em;font-weight:900;display:flex;align-items:center;gap:6px;text-align:left}
+.rdl-phone-mark{border:3px solid #092486;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:18px}
+.rdl-phone-brand small{font-size:7px;letter-spacing:.23em;display:block;margin-top:2px}
+.rdl-phone-preview{font-size:7px;letter-spacing:.085em;background:rgba(255,255,255,.86);border:1px solid #d9e2fa;color:#52638e;border-radius:40px;padding:5px 7px;font-weight:800;white-space:nowrap}
+.rdl-phone-show-title{position:absolute;z-index:3;top:91px;width:100%;text-align:center;color:#0b2376;font-size:21px;line-height:1.09;font-weight:870;letter-spacing:-.045em;text-shadow:0 1px 8px #eef3ff}
+.rdl-phone-title-line{display:block;width:28px;height:3px;background:#ff304d;margin:9px auto;border-radius:3px}
+.rdl-video-illustration{display:block;position:absolute;top:126px;left:0;width:100%;height:350px;object-fit:cover}
+.rdl-phone-screen::after{content:"";position:absolute;z-index:1;bottom:40px;left:0;right:0;height:154px;background:linear-gradient(0deg,#081020 0%,rgba(8,16,32,.88) 32%,transparent 100%);pointer-events:none}
+.rdl-short-controls{position:absolute;z-index:3;right:11px;bottom:91px;display:flex;flex-direction:column;gap:18px;align-items:center}
+.rdl-short-controls svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2.1;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 1px 2px #0007)}
+.rdl-short-caption{position:absolute;z-index:3;left:14px;right:49px;bottom:77px;color:#fff;text-shadow:0 1px 4px #0008}
+.rdl-short-caption strong{display:block;font-size:10px;margin-bottom:4px}
+.rdl-short-caption span{display:block;font-size:9px;line-height:1.35}
+.rdl-short-progress{position:absolute;z-index:4;bottom:61px;left:12px;right:12px;height:3px;background:rgba(255,255,255,.46);border-radius:4px}
+.rdl-short-progress span{display:block;width:41%;height:100%;background:#ff3653;border-radius:4px}
+.rdl-short-nav{position:absolute;z-index:3;bottom:0;left:0;right:0;height:56px;display:flex;justify-content:space-around;align-items:center;background:#081020;color:white;font-size:25px;font-weight:600}
+.rdl-short-plus{background:#fff;color:#0e1b50;padding:0px 9px;border-radius:7px;font-size:22px}
+.rdl-format-mini{position:absolute;z-index:2;border:1px solid #dfe7fb;background:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 28px #142e8a12;color:#2041b5;font-size:10px;font-weight:850;letter-spacing:.09em}
+.rdl-format-mini-left{left:calc(50% - 320px);top:54%}
+.rdl-format-mini-right{right:calc(50% - 347px);top:33%}
+.rdl-mini-dot{display:inline-block;width:7px;height:7px;background:#ff2d4d;border-radius:100%;margin-right:6px}
+.rdl-platform-label{font-size:10px;letter-spacing:.15em;color:#7684a2;font-weight:850;margin:16px 0 13px}
+.rdl-video-platforms{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:17px;color:#152554}
+.rdl-platform{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;white-space:nowrap}
+.rdl-platform svg{width:25px;height:25px;flex-shrink:0}
+.rdl-platform-divider{width:1px;height:23px;background:#d7def2}
+.rdl-format-footnote{max-width:610px;font-size:12px;color:#77839e;margin:18px auto 0;line-height:1.55}
+@media(max-width:720px){
+ .rdl-video-section{padding:30px 13px 25px;border-radius:21px}
+ .rdl-video-heading h2{font-size:clamp(29px,7.5vw,37px)}
+ .rdl-video-heading p{font-size:13.5px;line-height:1.6;padding:0 7px}
+ .rdl-video-redline{margin:14px auto}
+ .rdl-video-stage{min-height:525px;padding:22px 0 0}
+ .rdl-phone{transform:scale(.94);transform-origin:center center}
+ .rdl-format-mini{display:none}
+ .rdl-video-arc{width:225px;height:225px;border-width:17px}
+ .rdl-video-arc-left{left:-180px}
+ .rdl-video-arc-right{right:-180px}
+ .rdl-video-platforms{gap:9px 11px}
+ .rdl-platform{font-size:12px;gap:5px}
+ .rdl-platform svg{width:20px;height:20px}
+ .rdl-platform-divider{height:17px}
+ .rdl-platform-label{font-size:9px;margin-top:4px;letter-spacing:.08em}
+ .rdl-format-footnote{font-size:11px}
+}
+@media(max-width:380px){
+ .rdl-video-platforms{gap:8px}
+ .rdl-platform{font-size:11px}
+ .rdl-platform svg{width:18px;height:18px}
+ .rdl-phone{transform:scale(.9)}
+}
+
 </style>
 </head>
 <body>
@@ -225,7 +298,104 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), [role="button"]:f
 </div><div class="column-note">✦ No experience required — enthusiasm comes first.</div></div></div></section>
 
 <section class="section" id="your-show"><div class="create"><div class="content"><div class="overline">And there is more…</div><h2>Create your own show.<br>With friends. <span class="about-line">About anything.</span></h2><p>Your concept can be as thoughtful, creative and surprising as you like.</p><div class="frequency"><span>One-off episode / once a month / every couple of months / your own rhythm</span></div></div><div class="examples" aria-label="Example show ideas"><div class="examples-title">Examples of emissions</div><div class="bridge">From</div><div class="example from"><strong>Geopolitics, Unfiltered Debate</strong><span>Big questions, sharp opinions and open discussion.</span></div><div class="bridge">To</div><div class="example to"><strong>Your Monthly Dauphine Cooking Tips</strong><span>Friends, food and a more humorous side of campus life.</span></div></div></div>
-<div class="format-wrap"><div class="format-box"><span class="format-pill">How it looks</span><p>RDL mainly creates filmed conversations and short videos; students speak around microphones, with highlights shared on Instagram, TikTok or YouTube. Longer conversations and podcasts can also be explored.</p><div class="format-icons" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-4l-2-3Z"/><circle cx="12" cy="13" r="3.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></svg></div></div></div></section>
+</section>
+
+<section class="section rdl-video-section" id="how-it-looks" aria-labelledby="rdl-video-title">
+  <div class="rdl-video-heading">
+    <div class="overline">RDL, in your feed</div>
+    <h2 id="rdl-video-title">But what will it look like?</h2>
+    <span class="rdl-video-redline" aria-hidden="true"></span>
+    <p>Think <strong>Instagram Reels, TikTok and YouTube Shorts</strong> — not a traditional radio stream. RDL is built around filmed conversations, edited into short, vertical videos made to watch, share and scroll.</p>
+  </div>
+  <div class="rdl-video-stage">
+    <div class="rdl-video-arc rdl-video-arc-left" aria-hidden="true"></div>
+    <div class="rdl-video-arc rdl-video-arc-right" aria-hidden="true"></div>
+    <div class="rdl-phone" role="img" aria-label="Illustrative preview of an RDL vertical short video: students discussing around microphones with social-media style controls.">
+      <div class="rdl-phone-screen">
+        <div class="rdl-phone-topbar"><span class="rdl-phone-brand"><span class="rdl-phone-mark" aria-hidden="true">◉</span><span>RADIO<br>DAUPHINE<small>LONDON</small></span></span><span class="rdl-phone-preview">CONCEPT PREVIEW</span></div>
+        <div class="rdl-phone-show-title">Campus Around<br>the Table<span class="rdl-phone-title-line"></span></div>
+        <svg class="rdl-video-illustration" viewBox="0 0 330 365" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="rdlWall" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f4f7ff"/><stop offset="1" stop-color="#d6e1f9"/></linearGradient>
+            <linearGradient id="rdlTable" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f0c6a2"/><stop offset="1" stop-color="#be825e"/></linearGradient>
+          </defs>
+          <rect width="330" height="365" fill="url(#rdlWall)"/>
+          <rect x="24" y="60" width="86" height="113" rx="7" fill="#e4ebfc" stroke="#c9d5f2" stroke-width="3"/>
+          <path d="M37 144L57 118L75 132L94 99" stroke="#9cafe0" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <rect x="246" y="47" width="61" height="99" rx="6" fill="#edf1fc" stroke="#c9d5f2" stroke-width="3"/>
+          <rect x="260" y="63" width="34" height="4" rx="2" fill="#899ed7"/><rect x="260" y="76" width="25" height="4" rx="2" fill="#a8b8df"/><rect x="260" y="89" width="30" height="4" rx="2" fill="#a8b8df"/>
+          <ellipse cx="164" cy="295" rx="165" ry="40" fill="#8198c0" opacity=".13"/>
+          <!-- four stylised students at a podcast table -->
+          <path d="M-21 192Q9 171 48 184Q82 202 96 270L94 320H-15Z" fill="#11265f"/>
+          <ellipse cx="48" cy="164" rx="34" ry="40" fill="#e8ab86"/>
+          <path d="M16 166Q1 128 22 112Q38 98 66 113Q90 131 80 159Q74 136 55 133Q32 152 16 166Z" fill="#352a36"/>
+          <path d="M32 163Q49 173 60 161" stroke="#925a52" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M77 280Q91 202 116 195Q145 176 173 205L167 314Z" fill="#f8f8ff"/>
+          <ellipse cx="132" cy="174" rx="34" ry="40" fill="#f1be9e"/>
+          <path d="M96 167Q98 125 129 122Q165 122 168 172L156 192Q159 149 144 142Q121 159 102 142Z" fill="#895239"/>
+          <path d="M112 181Q131 193 145 181" stroke="#a46a60" fill="none" stroke-width="2" stroke-linecap="round"/>
+          <path d="M173 205Q191 180 227 189Q250 203 263 273L252 320H165Z" fill="#193477"/>
+          <ellipse cx="207" cy="170" rx="33" ry="38" fill="#d99b78"/>
+          <path d="M174 168Q169 143 186 127Q190 110 208 122Q229 111 238 130Q252 149 237 163Q224 143 215 144Q193 131 174 168Z" fill="#2f2531"/>
+          <path d="M194 179Q210 190 222 178" stroke="#85534b" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M249 275Q263 205 290 195Q316 188 348 219L351 328H258Z" fill="#ddd1e8"/>
+          <ellipse cx="282" cy="168" rx="32" ry="40" fill="#de9e7b"/>
+          <path d="M250 164Q243 128 267 118Q293 103 311 129Q324 157 304 201Q300 178 300 150Q274 142 250 164Z" fill="#3b2837"/>
+          <!-- table -->
+          <ellipse cx="165" cy="291" rx="185" ry="33" fill="url(#rdlTable)"/>
+          <path d="M-20 291Q165 334 350 291L340 365H-10Z" fill="#d49c77"/>
+          <ellipse cx="165" cy="291" rx="185" ry="12" fill="#f2c9a5"/>
+          <!-- microphones: angled toward speakers -->
+          <g stroke="#263752" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M44 281L78 218M78 218L81 208M78 218L96 229"/>
+            <path d="M139 284L141 214M141 214L132 202M141 214L150 205"/>
+            <path d="M213 284L207 211M207 211L196 203M207 211L215 201"/>
+            <path d="M283 281L253 221M253 221L245 213M253 221L263 225"/>
+          </g>
+          <g fill="#1a274a">
+            <rect x="65" y="188" width="21" height="34" rx="10" transform="rotate(28 75 205)"/>
+            <rect x="131" y="180" width="21" height="38" rx="10" transform="rotate(-9 141 199)"/>
+            <rect x="196" y="180" width="21" height="38" rx="10" transform="rotate(8 206 199)"/>
+            <rect x="248" y="190" width="21" height="36" rx="10" transform="rotate(-28 258 208)"/>
+          </g>
+          <g fill="#132d81"><rect x="101" y="275" width="27" height="25" rx="4"/><rect x="230" y="272" width="27" height="25" rx="4"/></g>
+          <g stroke="#fff" stroke-width="2" fill="none"><path d="M110 288a7 7 0 0 1 8-7M112 293a12 12 0 0 1 11-13"/><path d="M239 285a7 7 0 0 1 8-7M241 290a12 12 0 0 1 11-13"/></g>
+        </svg>
+        <div class="rdl-short-controls" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.7 0L12 5.7l-1.1-1.1a5.4 5.4 0 0 0-7.7 7.7L12 21l8.8-8.7a5.4 5.4 0 0 0 0-7.7Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-3.5-.7L3 21l1.7-5A8.5 8.5 0 1 1 20 11.5Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.5 18-4.2-7.3L3 9.5 21 3Z"/></svg>
+        </div>
+        <div class="rdl-short-caption"><strong>@radiodauphinelondon</strong><span>Real conversations. New perspectives.</span></div>
+        <div class="rdl-short-progress" aria-hidden="true"><span></span></div>
+        <div class="rdl-short-nav" aria-hidden="true"><span>⌂</span><span>⌕</span><span class="rdl-short-plus">+</span><span>▣</span><span>○</span></div>
+      </div>
+      <div class="rdl-phone-island" aria-hidden="true"></div>
+    </div>
+    <span class="rdl-format-mini rdl-format-mini-left" aria-hidden="true"><span class="rdl-mini-dot"></span> FILMED</span>
+    <span class="rdl-format-mini rdl-format-mini-right" aria-hidden="true"><span class="rdl-mini-dot"></span> EDITED FOR SHORTS</span>
+  </div>
+  <div class="rdl-platform-label">MADE FOR THE PLATFORMS YOU ALREADY USE</div>
+  <div class="rdl-video-platforms" aria-label="Social video formats">
+    <span class="rdl-platform">
+      <svg class="rdl-instagram" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="rdlInsta" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#ffb72a"/><stop offset=".4" stop-color="#ff2a69"/><stop offset="1" stop-color="#833cf7"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#rdlInsta)" stroke-width="2.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#rdlInsta)" stroke-width="2.5"/><circle cx="17.9" cy="6.2" r="1.4" fill="#d73baa"/></svg>
+      Instagram Reels
+    </span>
+    <span class="rdl-platform-divider" aria-hidden="true"></span>
+    <span class="rdl-platform">
+      <svg class="rdl-tiktok" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2v11.8a4.5 4.5 0 1 1-4-4.5V13a1.9 1.9 0 1 0 1.2 1.8V2H14Z" fill="#04d8d8" transform="translate(-.7 .3)"/><path d="M15 2c.3 3 1.8 4.8 5 5v3.5a9.6 9.6 0 0 1-5-1.6v5.5a5.3 5.3 0 1 1-5.3-5.3v3.6a1.7 1.7 0 1 0 1.7 1.7V2H15Z" fill="#111326"/><path d="M16.1 2c.3 2.6 1.7 4.2 4.3 4.6v3c-2-.1-3.6-.8-4.3-1.4V2Z" fill="#ff335d"/></svg>
+      TikTok
+    </span>
+    <span class="rdl-platform-divider" aria-hidden="true"></span>
+    <span class="rdl-platform">
+      <svg class="rdl-youtube" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 1.2c4.4 0 6.5 4.9 3.4 7.5L12.9 14l4.5 2.8c2.7 1.7 2.1 5.8-1 6.6-1.7.4-3.3.1-4.9-.7l-5.5-3.3c-2.8-1.6-3-5.2-.3-7l7.7-5.2-3-1.7C8 3.6 9.7 1.4 12.6 1.2h3.8Z" fill="#f91722"/><path d="m9.3 9 7 3-7 3V9Z" fill="#fff"/></svg>
+      YouTube Shorts
+    </span>
+  </div>
+  <p class="rdl-format-footnote">Illustrative preview · Short, edited video clips will be RDL's main format. Longer episodes may also be explored.</p>
+</section>
+
+
 
 <section class="section" id="series"><div class="section-head"><div><div class="overline">Open to everyone</div><h2>4 signature series.</h2></div><p>These are the 4 RDL formats already imagined; every member can take part.</p></div><div class="series-grid"><article class="series"><div class="series-title"><span class="series-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 10 10-6 10 6-10 6-10-6Z"/><path d="M6 12v5c4 3 8 3 12 0v-5M22 10v6"/></svg></span><h3>Alumni Stories</h3></div><p>Hear from Dauphine alumni about their journeys, choices and experiences.</p></article>
 <article class="series"><div class="series-title"><span class="series-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21 20v-2a4 4 0 0 0-3-3.87"/></svg></span><h3>Societies Around the Table</h3></div><p>Student societies share their projects and ideas, and co-create short video clips.</p></article>

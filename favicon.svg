@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Radio Dauphine London">
+<circle cx="64" cy="64" r="64" fill="#071b83"/>
+<g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
+<path d="M84 23 A45 45 0 1 0 84 105"/>
+<path d="M79 36 A31 31 0 1 0 79 92"/>
+<path d="M72 47 A19 19 0 1 0 72 81"/>
+</g>
+<circle cx="63" cy="64" r="12" fill="#fff"/>
+</svg>
